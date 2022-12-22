@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-debian-container
+spec:
+      containers:
+      - name: pi
+        image: debian
+        command: ["/bin/echo"]
+        args: ["Hello, World."]

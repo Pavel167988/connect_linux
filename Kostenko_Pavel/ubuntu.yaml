@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: container
+  labels:
+    app: ubuntu
+spec:
+  containers:
+  - image: ghcr.io/pavel167988/docker_push:3
+    command:
+      - "sleep"
+      - "604800"
+    imagePullPolicy: IfNotPresent
+    name: ubuntu
+  restartPolicy: Always
